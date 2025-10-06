@@ -725,6 +725,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
