@@ -34,8 +34,8 @@ body {
 }
 
 .navbar img {
-    height: 40px;
-    margin: 10px;
+    height: 120px;
+    margin: -30px -20px -30px 0px;
 }
 
 .navbar>.nav-btns>a {
@@ -96,25 +96,59 @@ body {
 }
 
 .mobile-navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding-right: 20px;
+    display: none;
 }
 
-    
+.mobile-navbar-content{
+    display: none;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 100px;
+    width: 90vw;
+    z-index: 1;
+    align-items: center;
+    background: hsl(14, 71%, 56%);
+    padding: 20px;
+    border-radius: 24px;
+}
 
-.mobile-navbar img{
-    height: 40px;
-    margin: 10px;
+.mobile-navbar-content img{
+    height: 200px;
+    margin: -50px 0px -30px 0px;
+}
+
+.mobile-nav-btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.mobile-nav-btns a{
+    color: hsl(0, 0%, 100%);
+    font-family: roboto;
+    font-size: 2em;
+}
+
+.mobile-login-btns{
+    display: flex;
+    gap: 40px;
+    font-weight: bold;
+}
+
+.mobile-login-btns >#mo-login, #mo-signup{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: roboto;
+    background-color: hsl(7, 61%, 41%);
+    border-radius: 15px;
+    padding: 15px 20px;
+    color: hsl(0, 20%, 100%);
 }
 
 .hero-section {
@@ -684,6 +718,32 @@ body {
 
     .navbar{
         display: none;
+    }
+
+    .mobile-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+    }
+
+    .mobile-navbar img{
+    height: 120px;
+    }
+
+    .mobile-navbar >.bx{
+    font-size: 3em;
+    color: hsl(0, 0%, 100%);
+    background: hsl(0, 0%, 100% 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px;
     }
 
     .hero-section h1{
