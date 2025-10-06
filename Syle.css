@@ -746,6 +746,10 @@ body {
     padding: 10px;
     }
 
+    .hero-section{
+        height: 75vh;
+    }
+
     .hero-section h1{
         font-size: 3em;
         max-width: none;
