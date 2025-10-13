@@ -97,6 +97,30 @@ body {
 
 .mobile-navbar{
     display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.mobile-navbar img{
+    height: 100px;
+    margin-left: -20px;
+}
+
+.mobile-navbar >.bx{
+    font-size: 3em;
+    color: hsl(0, 0%, 100%);
+    background: hsl(0, 0%, 100% 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .mobile-navbar-content{
@@ -217,7 +241,7 @@ body {
     line-height: 46px;
     font-family: epilogue, roboto;
     color: hsl(0, 0%, 59%);
-    padding: 0px 120px;
+    max-width: 960px;
 }
 
 .about>p>#highlight {
@@ -352,7 +376,7 @@ body {
 .hiw-cards h3 {
     font-size: 36px;
     font-family: epilogue;
-    padding: 10px 100px 5px 5px;
+    padding: 10px 100px 10px 10px;
     color: hsl(0, 0%, 100%);
     border-radius: 10px;
     background-color: hsl(14, 71%, 56%);
@@ -372,15 +396,14 @@ body {
 
 .video-testimonial {
     display: flex;
-    justify-content: space-between;
-    align-items: end;
     padding: 20px;
+    gap: 50px;
 }
 
 .vt-main-text {
     display: flex;
     flex-direction: column;
-    height: 340px;
+    height: 100%;
     gap: 30px;
 }
 
@@ -392,11 +415,9 @@ body {
 
 .vt-main-text p {
     font-size: 2em;
-    font-weight: 400;
     font-family: roboto;
     font-weight: 300;
     color: hsl(0, 2%, 75%);
-    padding-right: 50px;
 }
 
 .vt-main-text span {
@@ -445,6 +466,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 50px 100px 0px 100px;
+    align-items: center;
 }
 
 .mf-card {
@@ -484,7 +506,7 @@ body {
     margin-bottom: 15px;
 }
 
-.oi-cards {
+.our-impact {
     display: flex;
     justify-content: space-between;
     border-radius: 20px;
@@ -502,7 +524,7 @@ body {
     text-align: center;
 }
 
-.oi-cards i {
+.our-impact i {
     font-size: 4em;
     margin-bottom: 30px;
     color: hsl(14, 71%, 56%);
@@ -668,12 +690,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 40px 0px;
+    margin: 40px 0px 20px 0px;
 }
 
 .footer-logo img {
     width: 200px;
-    height: auto;
     margin: 0px -80px -30px 0px;
 }
 
@@ -707,48 +728,21 @@ body {
     }
 }
 
-@media (max-width: 480px){
+@media (min-width: 320px) and (max-width: 480px){
     html{
-        font-size: 80%;
+        font-size: 70%;
     }
 
     .MT{
-        margin-top: 80px;
+        margin-top: 70px;
     }
 
     .navbar{
         display: none;
     }
 
-    .mobile-navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    height: 70px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 10px;
-    }
-
-    .mobile-navbar img{
-    height: 120px;
-    }
-
-    .mobile-navbar >.bx{
-    font-size: 3em;
-    color: hsl(0, 0%, 100%);
-    background: hsl(0, 0%, 100% 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 10px;
-    }
-
-    .hero-section{
-        height: 75vh;
+    .mobile-navbar {
+        display: flex;
     }
 
     .hero-section h1{
@@ -774,7 +768,7 @@ body {
 
     .about p{
         line-height: 40px;
-        padding: 0px 25px;
+        padding: 0px 20px;
     }
 
     .features{
@@ -791,7 +785,7 @@ body {
     }
 
     .feature-cards img{
-        width: 220px;
+        width: 160px;
     }
 
     .feature-cards h3{
@@ -822,7 +816,7 @@ body {
         flex-direction: column;
     }
 
-    .oi-cards{
+    .our-impact {
         display: flex;
         flex-direction: column;
     }
@@ -852,7 +846,7 @@ body {
     }
 
     .call-to-action{
-        padding: 30px;
+        padding: 20px;
     }
 
     .call-to-action form{
@@ -877,15 +871,107 @@ body {
         width: 100%;
     }
 
+    .footer{
+        margin: 40px 0px 10px 0px;
+    }
+
+    .footer-logo img {
+        width: 120px;
+        margin: 0px -50px -30px 0px;
+    }
+
     .footer-btns{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 10px;
+        gap: 15px;
     }
 
     .footer-btns a{
-        margin-bottom: 10px;
+        margin-bottom: 2px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 834px){
+
+    .MT {
+        margin-top: 100px;
     }
 
+    .navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+    display: flex;
+    height: 80px;
+    }
+
+    .mobile-navbar img{
+        height: 130px;
+    }
+
+    .about>p{
+        padding: 20px;
+    }
+
+    .features{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature-cards{
+        align-items: start;
+        width: 100%;
+    }
+
+    #item1 >img, #item2 >img, #item3 >img{
+        align-self: center;
+    }
+
+    .how-it-works{
+        margin: 0px;
+        padding: 20px;
+        gap: 5px;
+    }
+
+    .hiw-cards h3{
+        padding: 10px;
+    }
+
+    .hiw-cards p{
+        align-self: baseline;
+    }
+
+    .how-it-works i {
+        display: flex;
+        font-size: 50px;
+        color: hsl(14, 71%, 56%);
+    }
+
+    .video-testimonial{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .vt-main-text{
+        align-items: center;
+    }
+
+    .more-feedback{
+        margin: 50px 0px 0px 0px;
+        padding: 20px;
+    }
+
+    #oi-card2, #oi-card3{
+        border-left: 2px solid hsl(0, 0%, 59%);
+    }
+
+    .call-to-action p{
+        padding: 10px;
+    }
+  
 }
