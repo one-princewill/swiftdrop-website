@@ -64,25 +64,8 @@ body {
     font-weight: bold;
 }
 
-.login-btns>#login {
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.login-btns>#login {
-    color: hsl(0, 0%, 100%);
-    font-family: roboto;
-    transition: 0.3s ease;
-}
-
-.login-btns>#login:hover {
-    transform: scale(105%);
-    color: hsl(14, 71%, 56%);
-}
-
-.login-btns>#signup {
+.login-btns>#join-waitlistBtn {
     background-color: hsl(14, 71%, 56%);
-    border: 0.5px solid grey;
     border-radius: 20px;
     padding: 10px;
     color: hsl(0, 20%, 100%);
@@ -91,7 +74,7 @@ body {
     transition: 0.3s ease;
 }
 
-.login-btns>#signup:hover {
+.login-btns>#join-waitlistBtn:hover {
     transform: scale(105%);
 }
 
@@ -102,18 +85,18 @@ body {
     width: 100%;
     height: 50px;
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 0;
     z-index: 1000;
     padding: 10px;
 }
 
 .mobile-navbar img{
-    height: 100px;
+    height: 120px;
     margin-left: -20px;
 }
 
-.mobile-navbar >.bx{
+.mobile-navbar > a > .bx{
     font-size: 3em;
     color: hsl(0, 0%, 100%);
     background: hsl(0, 0%, 100% 0.3);
@@ -123,6 +106,10 @@ body {
     padding: 10px;
 }
 
+#mobile-navbtn-close{
+    display: none;
+}
+
 .mobile-navbar-content{
     display: none;
     flex-direction: column;
@@ -130,18 +117,13 @@ body {
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 100px;
-    width: 90vw;
+    top: 65px;
+    width: 75vw;
     z-index: 1;
     align-items: center;
-    background: hsl(14, 71%, 56%);
-    padding: 20px;
+    background: hsl(7, 61%, 41%);
+    padding: 40px;
     border-radius: 24px;
-}
-
-.mobile-navbar-content img{
-    height: 200px;
-    margin: -50px 0px -30px 0px;
 }
 
 .mobile-nav-btns{
@@ -149,30 +131,15 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
+    gap: 20px;
 }
 
 .mobile-nav-btns a{
     color: hsl(0, 0%, 100%);
     font-family: roboto;
-    font-size: 2em;
-}
-
-.mobile-login-btns{
-    display: flex;
-    gap: 40px;
-    font-weight: bold;
-}
-
-.mobile-login-btns >#mo-login, #mo-signup{
     font-size: 1.5em;
-    font-weight: bold;
-    font-family: roboto;
-    background-color: hsl(7, 61%, 41%);
-    border-radius: 15px;
-    padding: 15px 20px;
-    color: hsl(0, 20%, 100%);
+    font-weight: 400;
+    line-height: 30px;
 }
 
 .hero-section {
@@ -205,18 +172,6 @@ body {
     margin-bottom: 50px;
     font-family: roboto;
     text-align: center;
-}
-
-.hero-section a {
-    padding: 15px 25px;
-    font-size: 1.3em;
-    font-weight: 400px;
-    font-family: roboto;
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(14, 71%, 56%);
-    border: 0.5px solid hsl(0, 0%, 50%);
-    border-radius: 30px;
-    cursor: pointer;
 }
 
 .about {
@@ -585,7 +540,7 @@ body {
 }
 
 .accordion-active{
-    background-color: hsl(14, 71%, 56%);
+    background-color: hsl(6, 59%, 41%);
     padding: 24px;
     border-radius: 24px;
 }
@@ -649,6 +604,7 @@ body {
 
 .call-to-action form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -683,6 +639,14 @@ body {
 
 .call-to-action button:hover {
     transform: scale(1.05);
+}
+
+#error-message{
+    display: none;
+    font-size: 1em;
+    color: red;
+    font-family: roboto;
+    font-weight: 400;
 }
 
 .footer{
@@ -852,6 +816,7 @@ body {
     .call-to-action form{
         display: flex;
         flex-direction: column;
+
     }
 
     .call-to-action p{
@@ -865,10 +830,8 @@ body {
 
     .call-to-action input, .call-to-action button{
         padding: 15px 15px;
-    }
-
-    .call-to-action button{
         width: 100%;
+        margin: 5px;
     }
 
     .footer{

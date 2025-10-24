@@ -26,8 +26,7 @@
                 <a href="#faqs">Faqs</a>
             </div>
             <div class="login-btns">
-                <a href="login.html" id="login">Log In</a>
-                <a href="signup.html" id="signup">Sign Up</a>
+                <a href="#call-to-action" id="join-waitlistBtn">Join Waitlist</a>
             </div>
         </nav>
 
@@ -35,21 +34,21 @@
          <nav>
             <div class="mobile-navbar">
                 <img src="Assets/Images/white_swiftdrop_logo.png" alt="SwiftDrop-logo">
-                <i class='bx  bx-menu-wider'  ></i> 
+                <a id="mobile-navbtn">
+                    <i class='bx  bx-menu-wider'  ></i>
+                </a>
+                <a id="mobile-navbtn-close">
+                    <i class='bx  bx-x'  ></i>
+                </a>
             </div>
             <div class="mobile-navbar-content">
-            <img src="Assets/Images/white_swiftdrop_logo.png" alt="Swiftdrop Logo"
-                class="swiftdroplogowithtext">
             <ul class="mobile-nav-btns">
                 <a href="#features">Features</a>
                 <a href="#how-it-works">How it Works</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="#faqs">Faqs</a>
+                <a href="#call-to-action" id="mo-joinwaitlistBtn">Join Waitlist</a>
             </ul>
-            <div class="mobile-login-btns">
-                <a href="login.html" id="mo-login">Log In</a>
-                <a href="signup.html" id="mo-signup">Sign Up</a>
-            </div>
             </div>
         </nav>
     </header>
@@ -60,7 +59,6 @@
             <div class="hero-section">
                 <h1>Fast Delivery, the Smarter Way</h1>
                 <p>Reliable delivery solutions for restaurants, local shops, and customers tired of waiting.</p>
-                <a>Get Started</a>
             </div>
         </section>
         <!-- Short Info -->
@@ -255,13 +253,16 @@
         </section>
         <!-- Call to Action -->
         <section>
-            <div class="call-to-action MT">
+            <div class="call-to-action MT" id="call-to-action">
                     <h2>Elevate the way you deliver</h2>
                     <p>Get ready to serve your customers faster and smarter without the headaches of managing
                     deliveries.</p>
-                <form action="submit" class="cta-form">
-                    <input type="email" id="email" placeholder="name@email.com" required>
-                    <button type="submit">Sign Up</button>
+                <form action="https://formsubmit.co/ubidoprincewill93@gmail.com" method="POST" class="cta-form" id="waitlist-form">
+                    <div id="input">
+                        <input type="text" id="email" placeholder="name@email.com" name="email">
+                    <button type="submit">Join Waitlist</button>
+                    </div>
+                    <p id="error-message">*Please fill in all fields*</p>
                 </form>
             </div>
         </section>
@@ -280,6 +281,8 @@
         <h4>Made with love by <span>SwiftDrop Team</span></h4>
         </div>
     </footer>
+
+    <script src="App.js"></script>
 </body>
 
 </html>
