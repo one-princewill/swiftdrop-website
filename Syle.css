@@ -499,7 +499,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    margin: 30px;
 }
 
 .accordion-header{
@@ -524,25 +524,24 @@ body {
 
 .accordion-item{
     display: flex;
-    align-items: start;
-    gap: 300px;
-    width: 100%;
     color: hsl(0, 0%, 100%);
     font-size: 1.5em;
     font-family: epilogue;
+    justify-content: space-between;
 }
 
 .accordion-card{
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin: 20px;
+    gap: 10px;
+    min-width: 60%;
+    padding: 30px;
 }
 
 .accordion-active{
     background-color: hsl(6, 59%, 41%);
-    padding: 24px;
-    border-radius: 24px;
+    padding: 16px;
+    border-radius: 20px;
 }
 
 .accordion-content{
@@ -643,7 +642,7 @@ body {
 
 #error-message{
     display: none;
-    font-size: 1em;
+    font-size: 0.7em;
     color: red;
     font-family: roboto;
     font-weight: 400;
@@ -796,17 +795,19 @@ body {
         border-left: none;
     }
 
-    .accordion-wrapper{
+    .accordion-card{
+        min-width: 80%;
         padding: 20px;
     }
 
     .accordion-item{
         font-size: 1.3em;
-        gap: 10px;
+        gap: 20px;
     }
 
     .accordion-active{
-        width: 100%;
+        max-width: 90%;
+        min-width: 90%;
     }
 
     .call-to-action{
@@ -867,12 +868,22 @@ body {
     }
 
     .mobile-navbar {
-    display: flex;
-    height: 80px;
+        display: flex;
+        height: 80px;
     }
 
     .mobile-navbar img{
         height: 130px;
+    }
+
+    .mobile-navbar-content{
+        width: 40vw;
+        top: 85px;
+        right: 50px;
+    }
+
+    .mobile-nav-btns{
+        gap: 30px;
     }
 
     .about>p{
@@ -931,6 +942,11 @@ body {
 
     #oi-card2, #oi-card3{
         border-left: 2px solid hsl(0, 0%, 59%);
+    }
+
+    .accordion-card{
+        min-width: 80%;
+        padding: 30px;
     }
 
     .call-to-action p{
