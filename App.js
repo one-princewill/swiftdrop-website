@@ -19,10 +19,9 @@ mobileNavBtnClose.addEventListener('click', e => {
 const accordionCards = document.querySelectorAll(".accordion-card");
 
 accordionCards.forEach(card => {
-  const content = card.querySelector(".accordion-content"); // get the content inside this card
+  const content = card.querySelector(".accordion-content");
 
   card.addEventListener("click", () => {
-    // Close all cards first (optional — keeps only one open at a time)
     accordionCards.forEach(c => {
       if (c !== card) {
         c.classList.remove("accordion-active");
@@ -30,7 +29,6 @@ accordionCards.forEach(card => {
       }
     });
 
-    // Toggle the clicked one
     card.classList.toggle("accordion-active");
 
     if (card.classList.contains("accordion-active")) {
