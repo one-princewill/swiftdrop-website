@@ -4,15 +4,22 @@ const mobileNavBtnClose = document.getElementById('mobile-navbtn-close')
 const mobileMenu = document.querySelector('.mobile-navbar-content')
 
 mobileNavBtn.addEventListener('click', e => {
-    mobileNavBtn.style.display = 'none'
-    mobileMenu.style.display = 'block'
-    mobileNavBtnClose.style.display = 'block'
+  mobileMenu.classList.toggle("mobile-navbar-show")
+
+  const isOpen = mobileMenu.classList.contains("mobile-navbar-show")
+
+  mobileNavBtn.innerHTML = isOpen ? `<i class='bx  bx-x'  ></i>` : `<i class='bx  bx-menu-wider'  ></i>`
 });
 
-mobileNavBtnClose.addEventListener('click', e => {
-    mobileNavBtn.style.display = 'block'
-    mobileMenu.style.display = 'none'
-    mobileNavBtnClose.style.display = 'none'
+const navBtn = document.querySelectorAll("#navBtn")
+
+navBtn.forEach(btn => {
+  btn.addEventListener('click', e => {
+    if (mobileMenu.classList.contains("mobile-navbar-show")) {
+      mobileMenu.classList.remove("mobile-navbar-show")
+      mobileNavBtn.innerHTML = "<i class='bx  bx-menu-wider'  ></i>"
+    }
+  })
 })
 
 // Accordion Content design & display
@@ -25,16 +32,16 @@ accordionCards.forEach(card => {
     accordionCards.forEach(c => {
       if (c !== card) {
         c.classList.remove("accordion-active");
-        c.querySelector(".accordion-content").style.display = "none";
+        c.querySelector(".accordion-content").style.maxHeight = "0px";
       }
     });
 
     card.classList.toggle("accordion-active");
 
     if (card.classList.contains("accordion-active")) {
-      content.style.display = "block";
+      content.style.maxHeight = content.scrollHeight + "px";
     } else {
-      content.style.display = "none";
+      content.style.maxHeight = "0px";
     }
   });
 });
@@ -62,10 +69,10 @@ waitlistForm.addEventListener('submit', e => {
     }
 
     else {
-        errorMsg.style.display = 'block'
-        errorMsg.style.color = 'green'
-        errorMsg.textContent = "*You'll be Redirected*"
-        waitlistForm.reset();
-        waitlistForm.submit()
+      errorMsg.style.display = 'block'
+      errorMsg.style.color = 'green'
+      errorMsg.textContent = "*You'll be redirected shortly*"
+      waitlistForm.submit()
+      waitlistForm.reset()
     }
 });
